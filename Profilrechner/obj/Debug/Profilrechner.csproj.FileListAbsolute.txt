@@ -1,0 +1,14 @@
+D:\Profilrechner\Profilrechner\bin\Debug\Profilrechner.exe.config
+D:\Profilrechner\Profilrechner\bin\Debug\Profilrechner.exe
+D:\Profilrechner\Profilrechner\bin\Debug\Profilrechner.pdb
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner.csprojAssemblyReference.cache
+D:\Profilrechner\Profilrechner\obj\Debug\MainWindow.g.cs
+D:\Profilrechner\Profilrechner\obj\Debug\App.g.cs
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner_MarkupCompile.cache
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner_MarkupCompile.lref
+D:\Profilrechner\Profilrechner\obj\Debug\MainWindow.baml
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner.g.resources
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner.Properties.Resources.resources
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner.csproj.GenerateResource.cache
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner.exe
+D:\Profilrechner\Profilrechner\obj\Debug\Profilrechner.pdb
