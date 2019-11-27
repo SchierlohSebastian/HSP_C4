@@ -45,25 +45,32 @@
         <Button x:Name="btn_Beenden" Grid.ColumnSpan="4" Content="Beenden" HorizontalAlignment="Left" Margin="10,0,0,10.5" Grid.RowSpan="2" Width="75" Height="20" VerticalAlignment="Bottom" Click="btn_Beenden_Click"/>
 
         <!--Dreieck-->
-        <Grid x:Name="grid_dreieck" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1" Visibility="Hidden">
+        <Grid x:Name="grid_dreieck" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1">
             <Image x:Name="img_dreieck" Margin="349,100,10,83.5" Source="Dreieck.png"/>
             <Label x:Name="lab_ueberschrift_dreieck" Content="Dreieck" HorizontalAlignment="Left" Margin="27,72,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
             <!--Eingaben-->
             <Label x:Name="lab_h_dreick" Content="h" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_b_dreieck" Content="b" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_l_dreieck" Content="Länge" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_h_dreieck" HorizontalAlignment="Left" Height="23" Margin="72,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_b_dreieck" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="72,158,0,0"/>
-            <TextBox x:Name="tb_l_dreieck" HorizontalAlignment="Left" Height="23" Margin="72,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_h_dreieck" HorizontalAlignment="Left" Height="20" Margin="67,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_b_dreieck" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="67,161,0,0"/>
+            <TextBox x:Name="tb_l_dreieck" HorizontalAlignment="Left" Height="20" Margin="67,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_einheit_h_dreieck" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_b_dreieck" Content="cm" HorizontalAlignment="Left" Margin="148,155,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_laenge_dreieck" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
             <!--Ausgaben-->
             <Label x:Name="lab_flaeche_dreieck" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
             <Label x:Name="lab_volumen_dreieck" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_gewicht_dreieck" Content="Gewicht" HorizontalAlignment="Left" Margin="182,259,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_ftm_dreieck" Content="FTM" HorizontalAlignment="Left" Margin="182,290,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_flaeche_dreieck" HorizontalAlignment="Left" Height="23" Margin="72,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_volumen_dreieck" HorizontalAlignment="Left" Height="24" Margin="72,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_gewicht_dreieck" HorizontalAlignment="Left" Height="23" Margin="240,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_ftm_dreieck" HorizontalAlignment="Left" Height="23" Margin="240,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_gewicht_dreieck" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_ftm_dreieck" Content="FTM" HorizontalAlignment="Left" Margin="188,290,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_flaeche_dreieck" HorizontalAlignment="Left" Height="20" Margin="67,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_volumen_dreieck" HorizontalAlignment="Left" Height="20" Margin="67,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_gewicht_dreieck" HorizontalAlignment="Left" Height="20" Margin="240,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_ftm_dreieck" HorizontalAlignment="Left" Height="20" Margin="240,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <Label x:Name="lab_einehit_flaeche_dreieck" Content="cm^2" HorizontalAlignment="Left" Margin="148,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_eineheit_volumen_dreieck" Content="cm^3" HorizontalAlignment="Left" Margin="148,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_gewicht_dreieck" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_ftm_dreieck" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
         </Grid>
         <!--Rechteck-->
         <Grid x:Name="grid_rechteck" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1" Visibility="Hidden">
@@ -73,43 +80,61 @@
             <Label x:Name="lab_h_rechteck" Content="h" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_b_rechteck" Content="b" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_l_rechteck" Content="Länge" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_h_rechteck" HorizontalAlignment="Left" Height="23" Margin="72,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_b_rechteck" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="72,158,0,0"/>
-            <TextBox x:Name="tb_l_rechteck" HorizontalAlignment="Left" Height="23" Margin="72,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_h_rechteck" HorizontalAlignment="Left" Height="20" Margin="67,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_b_rechteck" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="67,161,0,0"/>
+            <TextBox x:Name="tb_l_rechteck" HorizontalAlignment="Left" Height="20" Margin="67,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_einheit_h_rechteck" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_b_rechteck" Content="cm" HorizontalAlignment="Left" Margin="148,155,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_laenge_rechteck" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
+
             <!--Ausgaben-->
             <Label x:Name="lab_flaeche_rechteck" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
             <Label x:Name="lab_volumen_rechteck" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_gewicht_rechteck" Content="Gewicht" HorizontalAlignment="Left" Margin="182,259,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_ftm_rechteck" Content="FTM" HorizontalAlignment="Left" Margin="182,290,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_flaeche_rechteck" HorizontalAlignment="Left" Height="23" Margin="72,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_volumen_rechteck" HorizontalAlignment="Left" Height="24" Margin="72,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_gewicht_rechteck" HorizontalAlignment="Left" Height="23" Margin="240,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_ftm_rechteck" HorizontalAlignment="Left" Height="23" Margin="240,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_gewicht_rechteck" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_ftm_rechteck" Content="FTM" HorizontalAlignment="Left" Margin="188,290,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_flaeche_rechteck" HorizontalAlignment="Left" Height="20" Margin="67,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_volumen_rechteck" HorizontalAlignment="Left" Height="20" Margin="67,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_gewicht_rechteck" HorizontalAlignment="Left" Height="20" Margin="240,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_ftm_rechteck" HorizontalAlignment="Left" Height="20" Margin="240,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <Label x:Name="lab_einehit_flaeche_rechteck" Content="cm^2" HorizontalAlignment="Left" Margin="148,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_eineheit_volumen_rechteck" Content="cm^3" HorizontalAlignment="Left" Margin="148,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_gewicht_rechteck" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_ftm_rechteck" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
         </Grid>
         <!--Kasten-->
-        <Grid x:Name="grid_kasten" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1">
+        <Grid x:Name="grid_kasten" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1" Visibility="Hidden">
             <Image x:Name="img_kasten" Margin="349,100,10,83.5" Source="Kasten.png"/>
             <Label x:Name="lab_ueberschrift_kasten" Content="Kasten" HorizontalAlignment="Left" Margin="27,72,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
             <!--Eingaben-->
-            <Label x:Name="lab_kleinh_kasten1" Content="h" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_kleinh_kasten" Content="h" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_kleinb_kasten" Content="b" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_l_kasten" Content="Länge" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_großh_kasten" Content="H" HorizontalAlignment="Left" Margin="182,124,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_großb_kasten" Content="B" HorizontalAlignment="Left" Margin="182,155,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_kleinh_kasten" HorizontalAlignment="Left" Height="23" Margin="72,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_kleinb_kasten" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="72,158,0,0"/>
-            <TextBox x:Name="tb_Laenge_kasten" HorizontalAlignment="Left" Height="23" Margin="72,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_großh_kasten" HorizontalAlignment="Left" Height="23" Margin="240,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_großb_kasten" HorizontalAlignment="Left" Height="23" Margin="240,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_großh_kasten" Content="H" HorizontalAlignment="Left" Margin="202,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_großb_kasten" Content="B" HorizontalAlignment="Left" Margin="204,155,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_kleinh_kasten" HorizontalAlignment="Left" Height="20" Margin="67,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_kleinb_kasten" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="67,161,0,0"/>
+            <TextBox x:Name="tb_l_kasten" HorizontalAlignment="Left" Height="20" Margin="67,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_großh_kasten" HorizontalAlignment="Left" Height="20" Margin="240,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_großb_kasten" HorizontalAlignment="Left" Height="20" Margin="240,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_einheit_h_kasten" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_b_kasten" Content="cm" HorizontalAlignment="Left" Margin="148,155,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_laenge_kasten" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_großh_kasten" Content="cm" HorizontalAlignment="Left" Margin="320,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheiten_großb_kasten" Content="cm" HorizontalAlignment="Left" Margin="320,155,0,0" VerticalAlignment="Top"/>
             <!--Ausgaben-->
-            <Label x:Name="lab_flaeche_kasten" Content="Fläche" HorizontalAlignment="Left" Margin="10,257,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
-            <Label x:Name="lab_volumen_kasten" Content="Volumen" HorizontalAlignment="Left" Margin="10,288,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_gewicht_kasten" Content="Gewicht" HorizontalAlignment="Left" Margin="182,259,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_ftm_kasten" Content="FTM" HorizontalAlignment="Left" Margin="182,290,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_flaeche_kasten" HorizontalAlignment="Left" Height="23" Margin="72,260,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_volumen_kasten" HorizontalAlignment="Left" Height="24" Margin="72,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_gewicht_kasten" HorizontalAlignment="Left" Height="23" Margin="240,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_ftm_kasten" HorizontalAlignment="Left" Height="23" Margin="240,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_flaeche_kasten" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
+            <Label x:Name="lab_volumen_kasten" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_gewicht_kasten" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_ftm_kasten" Content="FTM" HorizontalAlignment="Left" Margin="188,290,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_flaeche_kasten" HorizontalAlignment="Left" Height="20" Margin="67,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_volumen_kasten" HorizontalAlignment="Left" Height="20" Margin="67,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_gewicht_kasten" HorizontalAlignment="Left" Height="20" Margin="240,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_ftm_kasten" HorizontalAlignment="Left" Height="20" Margin="240,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <Label x:Name="lab_einehit_flaeche_kasten" Content="cm^2" HorizontalAlignment="Left" Margin="148,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_eineheit_volumen_kasten" Content="cm^3" HorizontalAlignment="Left" Margin="148,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_gewicht_kasten" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_ftm_kasten" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
+
         </Grid>
         <!--L-Profil-->
         <Grid x:Name="grid_lprofil" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1" Visibility="Hidden">
@@ -119,22 +144,31 @@
             <Label x:Name="lab_kleinh_lprofil" Content="h" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_kleinb_lprofil" Content="b" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_l_lprofil" Content="Länge" HorizontalAlignment="Left" Margin="10,186,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_großh_lprofil" Content="H" HorizontalAlignment="Left" Margin="182,124,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_großb_lprofil" Content="B" HorizontalAlignment="Left" Margin="182,155,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_kleinh_lprofil" HorizontalAlignment="Left" Height="23" Margin="72,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_kleinb_lprofil" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="72,158,0,0"/>
-            <TextBox x:Name="tb_Laenge_lprofil" HorizontalAlignment="Left" Height="23" Margin="72,189,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_großh_lprofil" HorizontalAlignment="Left" Height="23" Margin="240,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_großb_lprofil" HorizontalAlignment="Left" Height="23" Margin="240,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_großh_lprofil" Content="H" HorizontalAlignment="Left" Margin="202,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_großb_lprofil" Content="B" HorizontalAlignment="Left" Margin="204,155,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_kleinh_lprofil" HorizontalAlignment="Left" Height="20" Margin="67,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_kleinb_lprofil" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="67,161,0,0"/>
+            <TextBox x:Name="tb_l_lprofil" HorizontalAlignment="Left" Height="20" Margin="67,192,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_großh_lprofil" HorizontalAlignment="Left" Height="20" Margin="240,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_großb_lprofil" HorizontalAlignment="Left" Height="20" Margin="240,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_einheit_h_lprofil" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_b_lprofil" Content="cm" HorizontalAlignment="Left" Margin="148,155,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_laenge_lprofil" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_großh_lprofil" Content="cm" HorizontalAlignment="Left" Margin="320,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheiten_großb_lprofil" Content="cm" HorizontalAlignment="Left" Margin="320,155,0,0" VerticalAlignment="Top"/>
             <!--Ausgaben-->
             <Label x:Name="lab_flaeche_lprofil" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
             <Label x:Name="lab_volumen_lprofil" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_gewicht_lprofil" Content="Gewicht" HorizontalAlignment="Left" Margin="182,259,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_ftm_lprofil" Content="FTM" HorizontalAlignment="Left" Margin="182,290,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_flaeche_lprofil" HorizontalAlignment="Left" Height="23" Margin="72,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_volumen_lprofil" HorizontalAlignment="Left" Height="24" Margin="72,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_gewicht_lprofil" HorizontalAlignment="Left" Height="23" Margin="240,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_ftm_lprofil" HorizontalAlignment="Left" Height="23" Margin="240,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_gewicht_lprofil" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_ftm_lprofil" Content="FTM" HorizontalAlignment="Left" Margin="188,290,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_flaeche_lprofil" HorizontalAlignment="Left" Height="20" Margin="67,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_volumen_lprofil" HorizontalAlignment="Left" Height="20" Margin="67,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_gewicht_lprofil" HorizontalAlignment="Left" Height="20" Margin="240,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_ftm_lprofil" HorizontalAlignment="Left" Height="20" Margin="240,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <Label x:Name="lab_einehit_flaeche_lprofil" Content="cm^2" HorizontalAlignment="Left" Margin="148,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_eineheit_volumen_lprofil" Content="cm^3" HorizontalAlignment="Left" Margin="148,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_gewicht_lprofil" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_ftm_lprofil" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
         </Grid>
         <!--Kreis-->
         <Grid x:Name="grid_kreis" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1" Visibility="Hidden">
@@ -143,17 +177,23 @@
             <!--Eingaben-->
             <Label x:Name="lab_d_kreis" Content="d" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_l_kreis" Content="Länge" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_d_kreis" HorizontalAlignment="Left" Height="23" Margin="72,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_l_kreis" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="72,158,0,0"/>
-            <!--Ausgaben-->
+            <TextBox x:Name="tb_d_kreis" HorizontalAlignment="Left" Height="20" Margin="67,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_l_kreis" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="67,161,0,0"/>
+            <Label x:Name="lab_einheit_d_kreis" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_laenge_kreis" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
+             <!--Ausgaben-->
             <Label x:Name="lab_flaeche_kreis" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
             <Label x:Name="lab_volumen_kreis" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_gewicht_kreis" Content="Gewicht" HorizontalAlignment="Left" Margin="182,259,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_ftm_kreis" Content="FTM" HorizontalAlignment="Left" Margin="182,290,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_flaeche_kreis" HorizontalAlignment="Left" Height="23" Margin="72,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_volumen_kreis" HorizontalAlignment="Left" Height="24" Margin="72,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_gewicht_kreis" HorizontalAlignment="Left" Height="23" Margin="240,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_ftm_kreis" HorizontalAlignment="Left" Height="23" Margin="240,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_gewicht_kreis" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_ftm_kreis" Content="FTM" HorizontalAlignment="Left" Margin="188,290,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_flaeche_kreis" HorizontalAlignment="Left" Height="20" Margin="67,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_volumen_kreis" HorizontalAlignment="Left" Height="20" Margin="67,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_gewicht_kreis" HorizontalAlignment="Left" Height="20" Margin="240,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_ftm_kreis" HorizontalAlignment="Left" Height="20" Margin="240,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <Label x:Name="lab_einehit_flaeche_kreis" Content="cm^2" HorizontalAlignment="Left" Margin="148,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_eineheit_volumen_kreis" Content="cm^3" HorizontalAlignment="Left" Margin="148,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_gewicht_kreis" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_ftm_kreis" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
         </Grid>
         <!--Ellipse-->
         <Grid x:Name="grid_ellipse" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1" Visibility="Hidden">
@@ -161,21 +201,27 @@
             <Label x:Name="lab_ueberschrift_ellipse" Content="Ellipse" HorizontalAlignment="Left" Margin="27,72,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
             <!--Eingaben-->
             <Label x:Name="lab_a_ellipse" Content="a" HorizontalAlignment="Left" Margin="10,124,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_b_ellipse" Content="b" HorizontalAlignment="Left" Margin="182,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_b_ellipse" Content="b" HorizontalAlignment="Left" Margin="204,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_l_ellipse" Content="Länge" HorizontalAlignment="Left" Margin="10,155,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_a_ellipse" HorizontalAlignment="Left" Height="23" Margin="72,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_b_ellipse" HorizontalAlignment="Left" Height="23" Margin="240,127,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_l_ellipse" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="72,158,0,0"/>
-
+            <TextBox x:Name="tb_a_ellipse" HorizontalAlignment="Left" Height="20" Margin="68,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_b_ellipse" HorizontalAlignment="Left" Height="20" Margin="240,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <TextBox x:Name="tb_l_ellipse" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="68,161,0,0"/>
+            <Label x:Name="lab_einheit_a_ellipse" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_b_ellipse" Content="cm" HorizontalAlignment="Left" Margin="148,155,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_laenge_ellipse" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
             <!--Ausgaben-->
             <Label x:Name="lab_flaeche_ellipse" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
             <Label x:Name="lab_volumen_ellipse" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_gewicht_ellipse" Content="Gewicht" HorizontalAlignment="Left" Margin="182,259,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lab_ftm_ellipse" Content="FTM" HorizontalAlignment="Left" Margin="182,290,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="tb_flaeche_ellipse" HorizontalAlignment="Left" Height="23" Margin="72,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_volumen_ellipse" HorizontalAlignment="Left" Height="24" Margin="72,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_gewicht_ellipse" HorizontalAlignment="Left" Height="23" Margin="240,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
-            <TextBox x:Name="tb_ftm_ellipse" HorizontalAlignment="Left" Height="23" Margin="240,293,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80"/>
+            <Label x:Name="lab_gewicht_ellipse" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_ftm_ellipse" Content="FTM" HorizontalAlignment="Left" Margin="188,290,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="tb_flaeche_ellipse" HorizontalAlignment="Left" Height="20" Margin="68,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_volumen_ellipse" HorizontalAlignment="Left" Height="20" Margin="68,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <TextBox x:Name="tb_gewicht_ellipse" HorizontalAlignment="Left" Height="20" Margin="240,265,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" IsEnabled="False" MaxLines="1"/>
+            <TextBox x:Name="tb_ftm_ellipse" HorizontalAlignment="Left" Height="20" Margin="240,296,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" MaxLines="1" IsEnabled="False"/>
+            <Label x:Name="lab_einehit_flaeche_ellipse" Content="cm^2" HorizontalAlignment="Left" Margin="148,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_eineheit_volumen_ellipse" Content="cm^3" HorizontalAlignment="Left" Margin="148,290,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_gewicht_ellipse" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lab_einheit_ftm_ellipse" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
         </Grid>
     </Grid>
 </Window>
