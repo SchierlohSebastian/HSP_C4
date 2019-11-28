@@ -155,13 +155,13 @@ namespace Profilrechner
 
             if (tvi_dreieck.IsSelected)                                 // Dreieck                                                          
             {
-    // Textbox Eingaben an String übergeben 
-                strkleinb = tb_b_dreieck.Text;
-                strkleinh = tb_h_dreieck.Text;
-                strlaenge = tb_l_dreieck.Text;
+                // Textbox Eingaben an String übergeben 
+                double kleinB = Convert.ToDouble(strkleinb = tb_b_rechteck.Text);
+                double kleinH = Convert.ToDouble(strkleinh = tb_h_rechteck.Text);
+                double laenge = Convert.ToDouble(strlaenge = tb_l_rechteck.Text);
 
-     // Überprüfung der Eingaben 
-     
+                // Überprüfung der Eingaben 
+
                 if (strkleinh.Contains(".") | strkleinh.Contains("-") | strkleinh.Contains("+") | strkleinh.Contains("*") | strkleinh.Contains("/"))                    
                 {
                     MessageBox.Show("Wert h ist negativ oder enthält '.'", "Eingabefehler", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -180,19 +180,19 @@ namespace Profilrechner
                     tb_l_dreieck.Focus();
                     tb_l_dreieck.SelectAll();
                 }
-                else if (strkleinh.Contains("0"))
+                else if (nullUeberpruefung(kleinH))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für h Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_h_dreieck.Focus();
                     tb_h_dreieck.SelectAll();                  
                 }
-                else if (strkleinb.Contains("0"))
+                else if (nullUeberpruefung(kleinB))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für b Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_b_dreieck.Focus();
                     tb_b_dreieck.SelectAll();
                 }
-                else if (strlaenge.Contains("0"))
+                else if (nullUeberpruefung(laenge))
                 {
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_dreieck.Focus();
@@ -227,9 +227,9 @@ namespace Profilrechner
 
     // Textboxeingaben übergeben an string 
 
-                strkleinb = tb_b_rechteck.Text;
-                strkleinh = tb_h_rechteck.Text;
-                strlaenge = tb_l_rechteck.Text;
+                double kleinB =Convert.ToDouble( strkleinb = tb_b_rechteck.Text);
+                double kleinH = Convert.ToDouble(strkleinh = tb_h_rechteck.Text);
+                double laenge = Convert.ToDouble(strlaenge = tb_l_rechteck.Text);
 
     // Überprüfung der Eingaben 
 
@@ -251,19 +251,19 @@ namespace Profilrechner
                     tb_l_rechteck.Focus();
                     tb_l_rechteck.SelectAll();
                 }
-                else if (strkleinh.Contains("0"))
+                else if (nullUeberpruefung(kleinH))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für h Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_h_rechteck.Focus();
                     tb_h_rechteck.SelectAll();                  
                 }
-                else if (strkleinb.Contains("0"))
+                else if (nullUeberpruefung(kleinB))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für b Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_b_rechteck.Focus();
                     tb_b_rechteck.SelectAll();
                 }
-                else if (strlaenge.Contains("0"))
+                else if (nullUeberpruefung(laenge))
                 {
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_rechteck.Focus();
@@ -366,7 +366,7 @@ namespace Profilrechner
                     tb_kleinb_kasten.Focus();
                     tb_kleinb_kasten.SelectAll();
                 }
-                else if (strlaenge.Contains("0"))
+                else if (nullUeberpruefung(dlaenge))
                 {
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_kasten.Focus();
@@ -467,7 +467,7 @@ namespace Profilrechner
                     tb_kleinb_lprofil.SelectAll();
                 }
 
-                else if (strlaenge.Contains("0"))
+                else if (nullUeberpruefung(dlaenge))
                 {
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_lprofil.Focus();
@@ -499,11 +499,11 @@ namespace Profilrechner
 
             else if (tvi_kreis.IsSelected)                          // Kreis
             {
-    
-    // Übergabe der Eingegebenen Wert in strings
 
-                strdurchmesser = tb_d_kreis.Text;
-                strlaenge = tb_l_kreis.Text;
+                // Übergabe der Eingegebenen Wert in strings
+
+                double d = Convert.ToDouble(strdurchmesser = tb_d_kreis.Text);
+                double laenge = Convert.ToDouble( strlaenge = tb_l_kreis.Text);
 
     // Überprüfung der eingegebenen werte
 
@@ -519,13 +519,13 @@ namespace Profilrechner
                     tb_l_kreis.Focus();
                     tb_l_kreis.SelectAll();
                 }
-                else if (strdurchmesser.Contains("0"))
+                else if (nullUeberpruefung(d))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für d Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_d_kreis.Focus();
                     tb_d_kreis.SelectAll();
                 }
-                else if (strlaenge.Contains("0"))
+                else if (nullUeberpruefung(laenge))
                 {
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_kreis.Focus();
@@ -559,9 +559,9 @@ namespace Profilrechner
 
     // Übergabe der Eingabewerte zu string
 
-                stra = tb_a_ellipse.Text;
-                strb = tb_b_ellipse.Text;
-                strlaenge = tb_l_ellipse.Text;
+               double a = Convert.ToDouble ( stra = tb_a_ellipse.Text);
+                double b = Convert.ToDouble( strb = tb_b_ellipse.Text);
+                double laenge = Convert.ToDouble(strlaenge = tb_l_ellipse.Text);
 
     // Überprüfung der Eingabewerte
 
@@ -583,19 +583,19 @@ namespace Profilrechner
                     tb_l_ellipse.Focus();
                     tb_l_ellipse.SelectAll();
                 }
-                else if (stra.Contains("0"))
+                else if (nullUeberpruefung(a))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für a Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_a_ellipse.Focus();
                     tb_a_ellipse.SelectAll();
                 }
-                else if (strb.Contains("0"))
+                else if (nullUeberpruefung(b))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für b Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_b_ellipse.Focus();
                     tb_b_ellipse.SelectAll();
                 }
-                else if (strlaenge.Contains("0"))
+                else if (nullUeberpruefung(laenge))
                 {
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_ellipse.Focus();
@@ -636,5 +636,19 @@ namespace Profilrechner
                 break;
             }
         }
+        public static bool nullUeberpruefung(double zahl)
+        {
+            if (zahl <= 0)
+            {
+                
+                return true;
+                
+            }
+            else
+
+                
+            return false;
+        }
     }
 }
+
