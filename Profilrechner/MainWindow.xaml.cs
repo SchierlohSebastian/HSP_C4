@@ -199,8 +199,7 @@ namespace Profilrechner
                     tb_l_dreieck.SelectAll();
                 }
                 else
-                {
-    
+                {    
                     dkleinb = Convert.ToDouble(strkleinb);      // Konvertierung der überprüften Eingaben in double 
                     dkleinh = Convert.ToDouble(strkleinh);
                     dlaenge = Convert.ToDouble(strlaenge);
@@ -384,7 +383,6 @@ namespace Profilrechner
                     gewicht = Convert.ToString(dgewicht);
                     ftm = Convert.ToString(dftm);
 
-
                     tb_flaeche_kasten.Text = flaeche;                   // Ausgabe der Werte in Ausgabetextboxen für L-Kasten
                     tb_volumen_kasten.Text = volumen;
                     tb_gewicht_kasten.Text = gewicht;
@@ -483,12 +481,10 @@ namespace Profilrechner
                     dftm = (((dgroßb * (Math.Pow(dgroßh, 3))) + (dkleinb * (Math.Pow(dkleinh, 3)))) / 3) - (((dgroßb * dgroßh) + (dkleinb * dkleinh)) * de1);
 
 
-
                     flaeche = Convert.ToString(dflaeche);                           // Konvertierung der Ergenisse in string für Ausgabe
                     volumen = Convert.ToString(dvolumen);
                     gewicht = Convert.ToString(dgewicht);
                     ftm = Convert.ToString(dftm);
-
 
                     tb_flaeche_lprofil.Text = flaeche;                              // Ausgabe der Ergebnisse in Ausgabetextboxen für L-Profil
                     tb_volumen_lprofil.Text = volumen;
@@ -546,7 +542,6 @@ namespace Profilrechner
                     gewicht = Convert.ToString(dgewicht);
                     ftm = Convert.ToString(dftm);
                     
-
                     tb_flaeche_kreis.Text = flaeche;                            // Ausgabe der werte in ausgabetextbox für Kreis
                     tb_volumen_kreis.Text = volumen;
                     tb_gewicht_kreis.Text = gewicht;
@@ -616,7 +611,6 @@ namespace Profilrechner
                     volumen = Convert.ToString(dvolumen);
                     gewicht = Convert.ToString(dgewicht);
                     ftm = Convert.ToString(dftm);
-
 
                     tb_flaeche_ellipse.Text = flaeche;                  // Ausgabe in Ausgabe Textboxen für Ellipse 
                     tb_volumen_ellipse.Text = volumen;
