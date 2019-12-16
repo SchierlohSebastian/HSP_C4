@@ -27,3 +27,17 @@ C:\Users\ro2333\Documents\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.cs
 C:\Users\ro2333\Documents\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.csproj.CoreCompileInputs.cache
 C:\Users\ro2333\Documents\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.exe
 C:\Users\ro2333\Documents\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.pdb
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\bin\Debug\Profilrechner.exe.config
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\bin\Debug\Profilrechner.exe
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\bin\Debug\Profilrechner.pdb
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.csprojAssemblyReference.cache
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\MainWindow.g.cs
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\App.g.cs
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner_MarkupCompile.cache
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner_MarkupCompile.lref
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\MainWindow.baml
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.g.resources
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.Properties.Resources.resources
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.csproj.GenerateResource.cache
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.exe
+C:\Users\renge\OneDrive\Dokumente\GitHub\HSP_C4\Profilrechner\obj\Debug\Profilrechner.pdb
