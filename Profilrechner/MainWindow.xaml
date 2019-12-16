@@ -43,6 +43,7 @@
         <!--Buttons-->
         <Button x:Name="btn_berechne" Content="Berechne" Margin="0,0,10,10" RenderTransformOrigin="-1.019,0.428" Grid.Column="3" HorizontalAlignment="Right" Width="76" Height="20" VerticalAlignment="Bottom" Grid.Row="1" Click="btn_berechne_Click"/>
         <Button x:Name="btn_Beenden" Grid.ColumnSpan="4" Content="Beenden" HorizontalAlignment="Left" Margin="10,0,0,10.5" Grid.RowSpan="2" Width="75" Height="20" VerticalAlignment="Bottom" Click="btn_Beenden_Click"/>
+        <Button  x:Name="btn_catia" Grid.ColumnSpan="4" Content="CATIA" HorizontalAlignment="Right" Margin="0,0,100,10" Grid.RowSpan="2" VerticalAlignment="Bottom" Width="75" Click="btn_catia_Click"/>
 
         <!--Dreieck-->
         <Grid x:Name="grid_dreieck" Margin="130,10,10,35" RenderTransformOrigin="0.292,1.137" Grid.Column="3" Grid.Row="1">
@@ -181,7 +182,7 @@
             <TextBox x:Name="tb_l_kreis" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Margin="67,161,0,0"/>
             <Label x:Name="lab_einheit_d_kreis" Content="cm" HorizontalAlignment="Left" Margin="148,124,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_einheit_laenge_kreis" Content="cm" HorizontalAlignment="Left" Margin="148,186,0,0" VerticalAlignment="Top"/>
-             <!--Ausgaben-->
+            <!--Ausgaben-->
             <Label x:Name="lab_flaeche_kreis" Content="Fläche" HorizontalAlignment="Left" Margin="10,259,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.46,0.555"/>
             <Label x:Name="lab_volumen_kreis" Content="Volumen" HorizontalAlignment="Left" Margin="10,290,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_gewicht_kreis" Content="Gewicht" HorizontalAlignment="Left" Margin="188,259,0,0" VerticalAlignment="Top"/>
@@ -223,5 +224,6 @@
             <Label x:Name="lab_einheit_gewicht_ellipse" Content="kg" HorizontalAlignment="Left" Margin="320,259,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lab_einheit_ftm_ellipse" Content="cm^4" HorizontalAlignment="Left" Margin="320,290,0,0" VerticalAlignment="Top"/>
         </Grid>
+
     </Grid>
 </Window>
