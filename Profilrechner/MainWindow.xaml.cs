@@ -28,6 +28,7 @@ namespace Profilrechner
         CatiaConnection cc = new CatiaConnection();
         public MainWindow()
         {
+            //clearTextboxes();
             InitializeComponent();                                                              // Nur die Startseite anzeigen lassen
             grid_dreieck.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -47,7 +48,7 @@ namespace Profilrechner
 
         private void tvi_dreieck_Selected_1(object sender, RoutedEventArgs e)                   // Anzeigen von Dreieck bei Auswahl in Treeview
         {
-
+            //clearTextboxes();
             btn_berechne.IsEnabled = true;
             grid_dreieck.Visibility = Visibility.Visible;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -62,6 +63,7 @@ namespace Profilrechner
 
         private void tvi_rechteck_Selected(object sender, RoutedEventArgs e)                    // Anzeigen von Rechteck bei Auswahl in Treeview
         {
+            //clearTextboxes();
             btn_berechne.IsEnabled = true;
             grid_dreieck.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Visible;
@@ -76,6 +78,7 @@ namespace Profilrechner
 
         private void tvi_kasten_Selected(object sender, RoutedEventArgs e)                      // Anzeigen von Kasten bei Auswahl in Treeview
         {
+            //clearTextboxes();
             btn_berechne.IsEnabled = true;
             grid_dreieck.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -90,6 +93,7 @@ namespace Profilrechner
 
         private void tvi_lprofil_Selected(object sender, RoutedEventArgs e)                     // Anzeigen von L-Profil Bei Auswahl in Treeview
         {
+            //clearTextboxes();
             btn_berechne.IsEnabled = true;
             grid_dreieck.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -104,6 +108,7 @@ namespace Profilrechner
 
         private void tvi_kreis_Selected(object sender, RoutedEventArgs e)                       // Anzeigen von Kreis bei Auswahl in Treeview
         {
+            //clearTextboxes();
             btn_berechne.IsEnabled = true;
             grid_dreieck.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -118,6 +123,7 @@ namespace Profilrechner
 
         private void tvi_ellipse_Selected(object sender, RoutedEventArgs e)                     // Anzeigen von Ellipse bei Auswahl in Treeview
         {
+            //clearTextboxes();
             btn_berechne.IsEnabled = true;
             grid_dreieck.Visibility = Visibility.Hidden;
             grid_rechteck.Visibility = Visibility.Hidden;
@@ -166,9 +172,14 @@ namespace Profilrechner
             if (tvi_dreieck.IsSelected)                                 // Dreieck                                                          
             {
                 // Textbox Eingaben an String übergeben 
-                double kleinB = Convert.ToDouble(strkleinb = tb_b_rechteck.Text);
-                double kleinH = Convert.ToDouble(strkleinh = tb_h_rechteck.Text);
-                double laenge = Convert.ToDouble(strlaenge = tb_l_rechteck.Text);
+
+                strkleinh = tb_h_dreieck.Text;
+                strkleinb = tb_b_dreieck.Text;
+                strlaenge = tb_l_dreieck.Text;
+
+                double kleinB = Convert.ToDouble(tb_b_dreieck.Text);
+                double kleinH = Convert.ToDouble (tb_h_dreieck.Text);
+                double laenge = Convert.ToDouble(tb_l_dreieck.Text);
 
                 // Überprüfung der Eingaben 
 
@@ -401,6 +412,8 @@ namespace Profilrechner
                     tb_volumen_kasten.Text = volumen;
                     tb_gewicht_kasten.Text = gewicht;
                     tb_ftm_kasten.Text = ftm;
+
+                    btn_catia.IsEnabled = true;
                 }
             }
 
@@ -504,6 +517,9 @@ namespace Profilrechner
                     tb_volumen_lprofil.Text = volumen;
                     tb_gewicht_lprofil.Text = gewicht;
                     tb_ftm_lprofil.Text = ftm;
+
+
+                    btn_catia.IsEnabled = true;
                 }
             }
 
@@ -560,6 +576,10 @@ namespace Profilrechner
                     tb_volumen_kreis.Text = volumen;
                     tb_gewicht_kreis.Text = gewicht;
                     tb_ftm_kreis.Text = ftm;
+
+
+                    btn_catia.IsEnabled = true;
+
                 }
             }
 
@@ -630,6 +650,9 @@ namespace Profilrechner
                     tb_volumen_ellipse.Text = volumen;
                     tb_gewicht_ellipse.Text = gewicht;
                     tb_ftm_ellipse.Text = ftm;
+
+
+                    btn_catia.IsEnabled = true;
                 }
             }
         }
@@ -666,10 +689,16 @@ namespace Profilrechner
                 cc.erzeugePart();
                 cc.erstelleLeereSkizze();
 
+                double dHDreieck = Convert.ToDouble(tb_h_dreieck.Text);
+                double dBDreieck = Convert.ToDouble(tb_b_dreieck.Text);
+                double dLaenge = Convert.ToDouble(tb_l_dreieck.Text);
+
+                cc.erstelleDreieck(dHDreieck, dBDreieck);
+                cc.erstelleBlock(dLaenge);
 
 
 
-              //  cc.erstelleDreieck(); // Hier fehlt noch die Umwandlung der Eingabe in eine Double Variable
+                //  cc.erstelleDreieck(); // Hier fehlt noch die Umwandlung der Eingabe in eine Double Variable
 
             }
             else if (tvi_rechteck.IsSelected)
@@ -686,15 +715,79 @@ namespace Profilrechner
                 cc.erstelleBlock(dLaenge);
 
             }
+            else if (tvi_kasten.IsSelected)
+            {
+
+                cc.laeuftCatia();
+                cc.erzeugePart();
+                cc.erstelleLeereSkizze();
+
+                double dHRechteckAußen = Convert.ToDouble(tb_großh_kasten.Text);
+                double dBRechteckAußen = Convert.ToDouble(tb_großb_kasten.Text);
+                double dHRechteckInnen = Convert.ToDouble(tb_kleinh_kasten.Text);
+                double dBRechteckInnen = Convert.ToDouble(tb_kleinb_kasten.Text);
+
+                double dLaenge = Convert.ToDouble(tb_l_kasten.Text);
+                cc.erstelleRechteckSkizze(dHRechteckAußen, dBRechteckAußen);
+                cc.erstelleRechteckSkizze(dHRechteckInnen, dBRechteckInnen);
+                cc.erstelleBlock(dLaenge);
+
+
+            }
         }
 
-        public void clearTextbox()
-        {
-            tb_l_ellipse.Clear();
-            tb_a_ellipse.Clear();
-            tb_b_dreieck.Clear();
+        //public void clearTextboxes()
+        //{
+            
+        //    tb_l_ellipse.Text = null;
+        //    tb_a_ellipse.Text = null;
+        //    tb_b_dreieck.Text = null;
+        //    tb_b_rechteck.Text = null;
+        //    tb_b_ellipse.Text = null;
+        //    tb_d_kreis.Text = null;
+        //    tb_flaeche_dreieck.Text = null;
+        //    tb_flaeche_ellipse.Text = null;
+        //    tb_flaeche_kasten.Text = null;
+        //    tb_flaeche_kreis.Text = null;
+        //    tb_flaeche_lprofil.Text = null;
+        //    tb_flaeche_rechteck.Text = null;
+        //    tb_ftm_dreieck.Text = null;
+        //    tb_ftm_ellipse.Text = null;
+        //    tb_ftm_kasten.Text = null;
+        //    tb_ftm_kreis.Text = null;
+        //    tb_ftm_lprofil.Text = null;
+        //    tb_ftm_rechteck.Text = null;
+        //    tb_gewicht_dreieck.Text = null;
+        //    tb_gewicht_ellipse.Text = null;
+        //    tb_gewicht_kasten.Text = null;
+        //    tb_gewicht_kreis.Text = null;
+        //    tb_gewicht_lprofil.Text = null;
+        //    tb_gewicht_rechteck.Text = null;
+        //    tb_großb_kasten.Text = null;
+        //    tb_großb_lprofil.Text = null;
+        //    tb_großh_kasten.Text = null;
+        //    tb_großh_lprofil.Text = null;
+        //    tb_h_dreieck.Text = null;
+        //    tb_h_rechteck.Text = null;
+        //    tb_kleinb_kasten.Text = null;
+        //    tb_kleinb_lprofil.Text = null;
+        //    tb_kleinh_kasten.Text = null;
+        //    tb_kleinh_lprofil.Text = null;
+        //    tb_l_dreieck.Text = null;
+        //    tb_l_ellipse.Text = null;
+        //    tb_l_kasten.Text = null;
+        //    tb_l_kreis.Text = null;
+        //    tb_l_lprofil.Text = null; ;
+        //    tb_l_rechteck.Text = null;
+        //    tb_volumen_dreieck.Text = null;
+        //    tb_volumen_ellipse.Text = null;
+        //    tb_volumen_kasten.Text = null;
+        //    tb_volumen_kreis.Text = null;
+        //    tb_volumen_lprofil.Text = null;
+        //    tb_volumen_rechteck.Text = null;
 
-        }
+
+        //}
         public class CatiaConnection
         {
             INFITF.Application hsp_catiaApp;
