@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon Hsp.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Interop.INFITF">
       <HintPath>..\Interop.INFITF.dll</HintPath>
@@ -114,6 +117,9 @@
     <Resource Include="Kreis.png" />
     <Resource Include="L-Profil.png" />
     <Resource Include="Rechteck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icon Hsp.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

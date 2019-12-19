@@ -178,7 +178,7 @@ namespace Profilrechner
                 strlaenge = tb_l_dreieck.Text;
 
                 double kleinB = Convert.ToDouble(tb_b_dreieck.Text);
-                double kleinH = Convert.ToDouble (tb_h_dreieck.Text);
+                double kleinH = Convert.ToDouble(tb_h_dreieck.Text);
                 double laenge = Convert.ToDouble(tb_l_dreieck.Text);
 
                 // Überprüfung der Eingaben 
@@ -588,8 +588,8 @@ namespace Profilrechner
 
                 // Übergabe der Eingabewerte zu string
 
-                double a = Convert.ToDouble(stra = tb_a_ellipse.Text);
-                double b = Convert.ToDouble(strb = tb_b_ellipse.Text);
+                double dAEllipse = Convert.ToDouble(stra = tb_a_ellipse.Text);
+                double dbEllipse = Convert.ToDouble(strb = tb_b_ellipse.Text);
                 double laenge = Convert.ToDouble(strlaenge = tb_l_ellipse.Text);
 
                 // Überprüfung der Eingabewerte
@@ -612,13 +612,13 @@ namespace Profilrechner
                     tb_l_ellipse.Focus();
                     tb_l_ellipse.SelectAll();
                 }
-                else if (nullUeberpruefung(a))
+                else if (nullUeberpruefung(dAEllipse))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für a Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_a_ellipse.Focus();
                     tb_a_ellipse.SelectAll();
                 }
-                else if (nullUeberpruefung(b))
+                else if (nullUeberpruefung(dbEllipse))
                 {
                     MessageBox.Show("Alle ausgegeben Werte werden 0, da für b Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_b_ellipse.Focus();
@@ -629,6 +629,18 @@ namespace Profilrechner
                     MessageBox.Show("Die Werte werden Volumen und Gewicht werden 0, da für Länge Null eingegeben wurde", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
                     tb_l_ellipse.Focus();
                     tb_l_ellipse.SelectAll();
+                }
+                else if (dAEllipse < dbEllipse)
+                {
+                    MessageBox.Show("Das Maß a oder b wurde nicht korrekt gewählt, da a größer als b ist", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_b_ellipse.Focus();
+                    tb_b_ellipse.SelectAll();
+                }
+                else if (dAEllipse == dbEllipse)
+                {
+                    MessageBox.Show("Das Maß a oder b wurden nicht korrekt gewählt, da a genau so groß wie b ist", "Achtung", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    tb_b_ellipse.Focus();
+                    tb_b_ellipse.SelectAll();
                 }
                 else
                 {
@@ -706,8 +718,8 @@ namespace Profilrechner
                 cc.laeuftCatia();
                 cc.erzeugePart();
                 cc.erstelleLeereSkizze();
-          
-             
+
+
                 double dHRechteck = Convert.ToDouble(tb_h_rechteck.Text);
                 double dBRechteck = Convert.ToDouble(tb_b_rechteck.Text);
                 double dLaenge = Convert.ToDouble(tb_l_rechteck.Text);
@@ -734,11 +746,54 @@ namespace Profilrechner
 
 
             }
+            else if (tvi_lprofil.IsSelected)
+            {
+
+                cc.laeuftCatia();
+                cc.erzeugePart();
+                cc.erstelleLeereSkizze();
+
+                double dgroßHlprofil = Convert.ToDouble(tb_großh_lprofil.Text);
+                double dgroßBlprofil = Convert.ToDouble(tb_großb_lprofil.Text);
+                double dkleinHlprofil = Convert.ToDouble(tb_kleinh_lprofil.Text);
+                double dkleinBlprofil = Convert.ToDouble(tb_kleinb_lprofil.Text);
+
+                double dLaenge = Convert.ToDouble(tb_l_lprofil.Text);
+                cc.erstelleLprofilSkizze(dgroßHlprofil, dgroßBlprofil, dkleinHlprofil, dkleinBlprofil);
+                cc.erstelleBlock(dLaenge);
+            }
+            else if (tvi_kreis.IsSelected)
+            {
+
+                cc.laeuftCatia();
+                cc.erzeugePart();
+                cc.erstelleLeereSkizze();
+
+                double dDurchmesser = Convert.ToDouble(tb_d_kreis.Text);
+
+                double dLaenge = Convert.ToDouble(tb_l_kreis.Text);
+                cc.erstelleKreisSkizze(dDurchmesser);
+                cc.erstelleBlock(dLaenge);
+            }
+            else if (tvi_ellipse.IsSelected)
+            {
+
+                cc.laeuftCatia();
+                cc.erzeugePart();
+                cc.erstelleLeereSkizze();
+
+                double dA = Convert.ToDouble(tb_a_ellipse.Text);
+                double dB = Convert.ToDouble(tb_b_ellipse.Text);
+                double dLaenge = Convert.ToDouble(tb_l_ellipse.Text);
+                cc.erstelleEllipseSkizze(dA, dB);
+                cc.erstelleBlock(dLaenge);
+            }
         }
+
 
         //public void clearTextboxes()
         //{
-            
+
         //    tb_l_ellipse.Text = null;
         //    tb_a_ellipse.Text = null;
         //    tb_b_dreieck.Text = null;
@@ -805,7 +860,7 @@ namespace Profilrechner
                 }
                 catch
                 {
-                    MessageBox.Show("");
+                    MessageBox.Show("Bitte öffnen sie Catia und versuchen es erneut", "Hinweis", MessageBoxButton.OK, MessageBoxImage.Information);
                     return false;
                 }
                 return true;
@@ -825,12 +880,10 @@ namespace Profilrechner
 
             public void erstelleRechteckSkizze(double dL1, double dL2)
             {
+
                 Factory2D fact2D = hsp_catiaProfil.OpenEdition();
 
                 // Eckpunkte erstellen
-
-
-
 
                 Point2D P1 = fact2D.CreatePoint(dL2 / 2, dL1 / 2);
                 Point2D P2 = fact2D.CreatePoint(dL2 / 2, -dL1 / 2);
@@ -903,25 +956,25 @@ namespace Profilrechner
                 // Rechteck erzeugen
 
                 // erst die Punkte
-                Point2D catPoint2D1 = catFactory2D1.CreatePoint(dHoehe,0);
-                Point2D catPoint2D2 = catFactory2D1.CreatePoint(0, dBreite/2);
-                Point2D catPoint2D3 = catFactory2D1.CreatePoint(0, -dBreite/2);
-             
+                Point2D catPoint2D1 = catFactory2D1.CreatePoint(dHoehe, 0);
+                Point2D catPoint2D2 = catFactory2D1.CreatePoint(0, dBreite / 2);
+                Point2D catPoint2D3 = catFactory2D1.CreatePoint(0, -dBreite / 2);
+
 
                 // dann die Linien
-                Line2D catLine2D1 = catFactory2D1.CreateLine(dHoehe, 0, 0, dBreite/2);
+                Line2D catLine2D1 = catFactory2D1.CreateLine(dHoehe, 0, 0, dBreite / 2);
                 catLine2D1.StartPoint = catPoint2D1;
                 catLine2D1.EndPoint = catPoint2D2;
 
-                Line2D catLine2D2 = catFactory2D1.CreateLine(0, dBreite/2, 0, -dBreite/2 );
+                Line2D catLine2D2 = catFactory2D1.CreateLine(0, dBreite / 2, 0, -dBreite / 2);
                 catLine2D2.StartPoint = catPoint2D2;
                 catLine2D2.EndPoint = catPoint2D3;
 
-                Line2D catLine2D3 = catFactory2D1.CreateLine(0, -dBreite/2, dHoehe, 0);
+                Line2D catLine2D3 = catFactory2D1.CreateLine(0, -dBreite / 2, dHoehe, 0);
                 catLine2D3.StartPoint = catPoint2D3;
                 catLine2D3.EndPoint = catPoint2D1;
 
-        
+
 
                 // Skizzierer verlassen
                 hsp_catiaProfil.CloseEdition();
@@ -929,7 +982,92 @@ namespace Profilrechner
                 hsp_catiaPart.Part.Update();
             }
 
+            public void erstelleLprofilSkizze(double dL1, double dL2, double dL3, double dL4)
+            {
+                Factory2D fact2D = hsp_catiaProfil.OpenEdition();
 
+                // Skizze umbenennen
+                hsp_catiaProfil.set_Name("L-Profil");
+
+                // Eckpunkte erstellen
+
+                double dStartpunktx = 0;
+                double dStartpunkty = 0;
+
+                Point2D P1 = fact2D.CreatePoint(dStartpunktx, dStartpunkty);
+                Point2D P2 = fact2D.CreatePoint(dStartpunktx, dL1);
+                Point2D P3 = fact2D.CreatePoint(dL2 - dL4, dL1);
+                Point2D P4 = fact2D.CreatePoint(dL2 - dL4, dL1 - dL3);
+                Point2D P5 = fact2D.CreatePoint(dL2, dL1 - dL3);
+                Point2D P6 = fact2D.CreatePoint(dL2, dStartpunkty);
+
+                Line2D L1 = fact2D.CreateLine(dStartpunktx, dStartpunkty, dStartpunktx, dL1);
+                Line2D L2 = fact2D.CreateLine(dStartpunktx, dL1, dL2 - dL4, dL1);
+                Line2D L3 = fact2D.CreateLine(dL2 - dL4, dL1, dL2 - dL4, dL1 - dL3);
+                Line2D L4 = fact2D.CreateLine(dL2 - dL4, dL1 - dL3, dL2, dL1 - dL3);
+                Line2D L5 = fact2D.CreateLine(dL2, dL1 - dL3, dL2, dStartpunkty);
+                Line2D L6 = fact2D.CreateLine(dL2, dStartpunkty, dStartpunktx, dStartpunkty);
+
+                L1.StartPoint = P1;
+                L1.EndPoint = P2;
+
+                L2.StartPoint = P2;
+                L2.EndPoint = P3;
+
+                L3.StartPoint = P3;
+                L3.EndPoint = P4;
+
+                L4.StartPoint = P4;
+                L4.EndPoint = P1;
+
+                L5.StartPoint = P5;
+                L5.EndPoint = P6;
+
+                L6.StartPoint = P6;
+                L6.EndPoint = P1;
+
+
+                hsp_catiaProfil.CloseEdition();
+
+                hsp_catiaPart.Part.Update();
+            }
+
+            public void erstelleKreisSkizze(double ddurchmesser)
+            {//cc.erstelleLprofilSkizze   (dgroßHlprofil, dgroßBlprofil, dkleinHlprofil, dkleinBlprofil);
+                Factory2D fact2D = hsp_catiaProfil.OpenEdition();
+
+                // Skizze umbenennen
+                hsp_catiaProfil.set_Name("Kreis");
+
+                // Eckpunkte erstellen
+
+                double dStartpunktx = 0;
+                double dStartpunkty = 0;
+
+                Circle2D circle2D = fact2D.CreateClosedCircle(dStartpunktx, dStartpunkty, ddurchmesser);
+
+                hsp_catiaProfil.CloseEdition();
+
+                hsp_catiaPart.Part.Update();
+            }
+            public void erstelleEllipseSkizze(double dA, double dB)
+            {//cc.erstelleLprofilSkizze   (dgroßHlprofil, dgroßBlprofil, dkleinHlprofil, dkleinBlprofil);
+                Factory2D fact2D = hsp_catiaProfil.OpenEdition();
+
+                // Skizze umbenennen
+                hsp_catiaProfil.set_Name("Ellipse");
+
+                // Eckpunkte erstellen
+
+                double dStartpunktx = 0;
+                double dStartpunkty = 0;
+
+                Ellipse2D ellipse2D = fact2D.CreateClosedEllipse(dStartpunktx, dStartpunkty, dStartpunktx, dStartpunkty, dA, dB);
+
+                hsp_catiaProfil.CloseEdition();
+
+                hsp_catiaPart.Part.Update();
+            }
             public void erstelleLeereSkizze()
             {
                 HybridBodies catHybridBodies1 = hsp_catiaPart.Part.HybridBodies;
